@@ -82,3 +82,7 @@ const markup = images.map((image) => {
 });
 
 gallery.insertAdjacentHTML("beforeend", markup.join(""));
+
+gallery.addEventListener("click", (event) => {
+  event.preventDefault();
+});
