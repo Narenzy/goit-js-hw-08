@@ -85,24 +85,9 @@ gallery.insertAdjacentHTML("beforeend", markup.join(""));
 
 gallery.addEventListener("click", (event) => {
   event.preventDefault();
+  const largeImage = event.target.dataset.source;
+  if (event.target.classList.contains("gallery-image")) {
+    const instance = basicLightbox.create(`<img src="${largeImage}">`);
+    instance.show();
+  }
 });
-
-gallery.addEventListener("click", (event) => {
-  event.preventDefault();
-  // console.log(event.target);
-  event.target.dataset.source;
-  console.log(event.target.dataset.source);
-});
-
-// import * as basicLightbox from "basiclightbox";
-
-// const instance = basicLightbox.create(`
-//     <div class="modal">
-//         <p>
-//             Your first lightbox with just a few lines of code.
-//             Yes, it's really that simple.
-//         </p>
-//     </div>
-// `);
-
-// instance.show();
