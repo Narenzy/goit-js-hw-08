@@ -9,6 +9,12 @@
   flex-wrap: wrap;
   gap: 24px;
   list-style: none;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 0;
+  margin: auto;
 }
 .gallery-item {
   flex-basis: calc((100% - 48px) / 3);
